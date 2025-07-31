@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smita Rajmohan - AI Governance & Technology Law Speaker</title>
+    <title>Smita Rajmohan</title>
     <style>
         * {
             margin: 0;
@@ -12,519 +12,609 @@
         }
 
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.7;
-            color: #2d3748;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
             background: #ffffff;
             font-size: 16px;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 0;
         }
 
-        /* Header Section */
-        .header {
-            text-align: center;
-            margin-bottom: 80px;
-            padding: 60px 0;
-        }
-
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            margin: 0 auto 40px;
-            overflow: hidden;
-            border: 3px solid #e2e8f0;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Placeholder for photo - remove this when you add your actual image */
-        .profile-placeholder {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
             color: white;
-            font-size: 36px;
-            font-weight: bold;
-            font-family: 'Arial', sans-serif;
+            padding: 120px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        h1 {
-            font-size: 2.8rem;
-            font-weight: 400;
-            color: #1a202c;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="30 0 60 30 30 60 0 30"/></g></svg>') repeat;
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .name {
+            font-size: 4.5rem;
+            font-weight: 300;
             margin-bottom: 20px;
             letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e6ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .title {
-            font-size: 1.2rem;
-            color: #4a5568;
-            font-weight: 300;
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 60px;
-            flex-wrap: wrap;
-        }
-
-        .nav a {
-            color: #4a5568;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            padding: 8px 0;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .nav a:hover,
-        .nav a.active {
-            color: #1a202c;
-            border-bottom-color: #4a5568;
-        }
-
-        /* Content Sections */
-        .section {
-            margin-bottom: 80px;
-        }
-
-        .section h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: 400;
-            color: #1a202c;
             margin-bottom: 30px;
-            letter-spacing: -0.01em;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #4a5568;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
         }
 
-        .section p {
-            margin-bottom: 20px;
-            color: #4a5568;
-            font-size: 1.05rem;
-        }
-
-        /* About Section */
-        .about-content {
+        .tagline {
             font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        /* Speaking Topics Grid */
-        .topics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .topic-card {
-            padding: 0;
-            border: none;
-            background: transparent;
-        }
-
-        .topic-card h3 {
-            font-size: 1.2rem;
-            color: #1a202c;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .topic-card p {
-            color: #4a5568;
-            font-size: 1rem;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 0 auto;
             line-height: 1.7;
         }
 
-        /* Testimonials */
-        .testimonial {
-            background: #f7fafc;
-            padding: 40px;
-            margin: 40px 0;
-            border-left: 4px solid #4a5568;
-            font-style: italic;
+        /* Main Content */
+        .main-content {
+            padding: 100px 60px;
+            background: #ffffff;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin-bottom: 100px;
+        }
+
+        .section-full {
+            grid-column: 1 / -1;
+            margin-bottom: 80px;
+        }
+
+        /* Section Headers */
+        .section-header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #0f0f23;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+
+        .section-subtitle {
             font-size: 1.1rem;
-            line-height: 1.8;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Cards */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e8e8e8;
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border-color: #667eea;
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0f0f23;
+            margin-bottom: 15px;
+            letter-spacing: -0.01em;
+        }
+
+        .card-content {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .card-content a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .card-content a:hover {
+            color: #764ba2;
+        }
+
+        /* Metrics */
+        .metric {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0 4px;
+        }
+
+        /* Featured Section */
+        .featured {
+            background: linear-gradient(135deg, #f8faff 0%, #e8eeff 100%);
+            border-radius: 24px;
+            padding: 60px;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            transform: rotate(15deg);
+        }
+
+        .featured-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .featured .card-title {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: #f8faff;
+            border-left: 4px solid #667eea;
+            padding: 40px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.1);
+        }
+
+        .testimonial-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #333;
+            font-style: italic;
+            margin-bottom: 20px;
         }
 
         .testimonial-author {
-            margin-top: 20px;
-            font-style: normal;
             font-weight: 600;
-            color: #2d3748;
+            color: #667eea;
             font-size: 0.95rem;
+            font-style: normal;
         }
 
-        /* Contact Form */
-        .contact-form {
-            background: #f7fafc;
-            padding: 50px;
+        /* Writing Grid */
+        .writing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 40px;
-            border-radius: 8px;
         }
 
-        .contact-form h3 {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            color: #1a202c;
-            font-weight: 500;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #2d3748;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #e2e8f0;
-            border-radius: 4px;
-            font-size: 1rem;
-            font-family: inherit;
-            background: white;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #4a5568;
-            box-shadow: 0 0 0 3px rgba(74, 85, 104, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            background: #2d3748;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
+        .writing-item {
+            padding: 30px;
+            background: #f8faff;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
             transition: all 0.3s ease;
-            cursor: pointer;
-            font-family: inherit;
         }
 
-        .btn:hover {
-            background: #1a202c;
-            transform: translateY(-1px);
+        .writing-item:hover {
+            transform: translateX(8px);
+            background: #e8eeff;
         }
 
-        .btn-outline {
-            background: transparent;
-            color: #2d3748;
-            border: 2px solid #2d3748;
+        .writing-title {
+            font-weight: 600;
+            margin-bottom: 10px;
         }
 
-        .btn-outline:hover {
-            background: #2d3748;
+        .writing-publication {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #0f0f23;
             color: white;
+            padding: 100px 60px;
+            text-align: center;
+            position: relative;
         }
 
-        /* Links */
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.02"><circle cx="30" cy="30" r="2"/></g></svg>') repeat;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
         .contact-links {
             display: flex;
-            gap: 20px;
+            gap: 30px;
             justify-content: center;
-            margin-top: 40px;
+            margin-top: 50px;
             flex-wrap: wrap;
         }
 
-        /* Expertise Tags */
-        .expertise-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .tag {
-            background: #e2e8f0;
-            color: #2d3748;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 16px 32px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
             font-weight: 500;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .contact-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+        }
+
+        .contact-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .container {
-                padding: 20px 15px;
+            .hero {
+                padding: 80px 30px;
             }
 
-            h1 {
-                font-size: 2.2rem;
+            .name {
+                font-size: 3rem;
             }
 
-            .header {
-                margin-bottom: 60px;
-                padding: 40px 0;
+            .main-content {
+                padding: 60px 30px;
             }
 
-            .nav {
-                gap: 25px;
-            }
-
-            .section {
-                margin-bottom: 60px;
-            }
-
-            .topics-grid {
+            .section-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 40px;
             }
 
-            .contact-form {
-                padding: 30px 20px;
+            .card {
+                padding: 30px;
+            }
+
+            .featured {
+                padding: 40px 30px;
+            }
+
+            .contact {
+                padding: 60px 30px;
             }
 
             .contact-links {
                 flex-direction: column;
                 align-items: center;
             }
-
-            .profile-image {
-                width: 150px;
-                height: 150px;
-            }
         }
 
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Loading animation */
+        /* Animations */
         .fade-in {
             opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
         }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
     </style>
 </head>
 <body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="name">Smita Rajmohan</h1>
+            <p class="title">Assistant General Counsel for Artificial Intelligence</p>
+            <p class="tagline">Leading AI legal governance at Intuit's <span class="metric">$14B</span> fintech ecosystem. Shaping national AI policy through NIST and IEEE leadership. <span class="metric">Obama Foundation Leader</span> driving technology law innovation.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
     <div class="container">
-        <!-- Header -->
-        <header class="header fade-in">
-            <div class="profile-image">
-                <!-- Replace this placeholder with your actual photo -->
-                <!-- <img src="images/smita-photo.jpg" alt="Smita Rajmohan"> -->
-                    <div class="profile-placeholder">SR</div>
-            </div>
-            <h1>Smita Rajmohan</h1>
-            <p class="title">
-                Leading AI governance and technology law at Intuit with over a decade of experience shaping legal strategy for groundbreaking innovations. From launching the iPad at Apple to driving generative AI development at Autodesk, I bridge the gap between cutting-edge technology and strategic legal frameworks.
-            </p>
-        </header>
+        <main class="main-content">
+            <!-- Leadership Section -->
+            <section class="section-full">
+                <div class="section-header">
+                    <h2 class="section-title">Executive Leadership</h2>
+                    <p class="section-subtitle">Driving AI governance and legal strategy at the intersection of technology, policy, and business transformation</p>
+                </div>
 
-        <!-- Navigation -->
-        <nav class="nav">
-            <a href="#about" class="active">About</a>
-            <a href="#speaking">Speaking</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#contact">Contact</a>
-        </nav>
+                <div class="featured fade-in">
+                    <div class="featured-content">
+                        <h3 class="card-title">Obama Foundation Leader 2024-2025</h3>
+                        <div class="card-content">
+                            Selected as <a href="https://www.obama.org/programs/leaders/usa/2024-2025/smita-rajmohan/">Obama Foundation Leader</a> among <span class="metric">100</span> emerging leaders nationwide. <a href="https://www.law.berkeley.edu/spotlight/smita-rajmohan-named-obama-foundation-leader/">Recognized by UC Berkeley Law</a> for driving transformative change at the intersection of technology and social impact.
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- About Section -->
-        <section id="about" class="section fade-in">
-            <h2>About</h2>
-            <div class="about-content">
-                <p>I deliver transformative presentations that help organizations navigate the evolving landscape of AI governance, technology law, and innovation strategy. My unique perspective combines deep legal expertise with hands-on experience launching breakthrough products and building AI governance frameworks at scale.</p>
-                
-                <p>Active in AI policy through NIST AI Safety Consortium and IEEE USA, I help organizations navigate the complex intersection of law, technology, and innovation. My work spans from Fortune 500 companies to national AI safety standards, providing real-world insights that drive meaningful business transformation.</p>
-            </div>
+            <!-- Experience Grid -->
+            <div class="section-grid">
+                <div class="card fade-in stagger-1">
+                    <h3 class="card-title">Intuit</h3>
+                    <div class="card-content">
+                        <strong>Assistant General Counsel for AI</strong><br>
+                        Leading legal governance for AI initiatives across TurboTax, QuickBooks, and Credit Karma. Managing cross-functional teams and stakeholder relationships for <span class="metric">100M+</span> users and <span class="metric">$14B</span> in annual revenue operations.
+                    </div>
+                </div>
 
-            <div class="expertise-tags">
-                <span class="tag">AI Governance</span>
-                <span class="tag">Technology Law</span>
-                <span class="tag">Privacy & Data Protection</span>
-                <span class="tag">Innovation Strategy</span>
-                <span class="tag">Regulatory Compliance</span>
-                <span class="tag">Product Legal</span>
-                <span class="tag">Cross-border Legal</span>
-                <span class="tag">Tech Transactions</span>
-            </div>
-        </section>
+                <div class="card fade-in stagger-2">
+                    <h3 class="card-title">Policy Leadership</h3>
+                    <div class="card-content">
+                        <strong>NIST AI Safety Consortium</strong> member shaping national AI safety standards. <strong>Vice Chair, AI Policy Committee</strong> at IEEE USA. Bridging technical innovation with regulatory frameworks at the highest levels of government and industry.
+                    </div>
+                </div>
 
-        <!-- Speaking Topics -->
-        <section id="speaking" class="section fade-in">
-            <h2>Speaking Topics</h2>
-            <p>I offer keynotes, workshops, and panel discussions on the following topics:</p>
-            
-            <div class="topics-grid">
-                <div class="topic-card">
-                    <h3>AI Governance & Responsible AI Implementation</h3>
-                    <p>Real-world frameworks for implementing responsible AI governance. Learn from my experience building AI legal strategies at Fortune 500 companies and contributing to national AI safety standards.</p>
+                <div class="card fade-in stagger-3">
+                    <h3 class="card-title">Autodesk</h3>
+                    <div class="card-content">
+                        <strong>Head of AI Group Legal</strong><br>
+                        Pioneered legal frameworks for generative AI development serving <span class="metric">4M+</span> creators. Navigated first-of-kind intellectual property and copyright challenges in AI-generated content, enabling breakthrough product launches.
+                    </div>
                 </div>
-                
-                <div class="topic-card">
-                    <h3>Navigating AI Regulation & Compliance</h3>
-                    <p>Stay ahead of the rapidly evolving AI regulatory landscape. Practical insights on compliance strategies, risk mitigation, and building legal frameworks that enable innovation.</p>
-                </div>
-                
-                <div class="topic-card">
-                    <h3>Legal Strategy for Product Innovation</h3>
-                    <p>How legal teams can become strategic enablers of breakthrough innovation. From the iPad launch to generative AI platforms, learn to balance risk and opportunity.</p>
-                </div>
-                
-                <div class="topic-card">
-                    <h3>AI & Privacy: Building Privacy-Preserving Systems</h3>
-                    <p>Navigate the complex intersection of AI and privacy law. Strategies for data governance, consent frameworks, and building privacy-preserving AI systems.</p>
-                </div>
-                
-                <div class="topic-card">
-                    <h3>Technology Transactions & Deal Strategy</h3>
-                    <p>Master the legal complexities of technology deals. From startup acquisitions to complex licensing agreements, learn to structure deals that drive business success.</p>
-                </div>
-                
-                <div class="topic-card">
-                    <h3>Global Technology Law & Cross-Border Compliance</h3>
-                    <p>Navigate international technology regulations and cross-border compliance. Insights from legal practice across India and the United States in the global tech ecosystem.</p>
+
+                <div class="card fade-in stagger-4">
+                    <h3 class="card-title">Apple</h3>
+                    <div class="card-content">
+                        <strong>Senior Product Counsel</strong><br>
+                        Launch team legal counsel for iPad (<span class="metric">500M+</span> units sold), AirTag, and AirPods. Navigated international regulatory approvals across <span class="metric">30+</span> countries, building privacy frameworks still in use today.
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Testimonials -->
-        <section id="testimonials" class="section fade-in">
-            <h2>What Audiences Say</h2>
-            
-            <div class="testimonial">
-                "Smita's remarkable ability to navigate complex situations with poise and strategic thinking is truly exceptional. She masterfully coordinates with C-suite executives and senior leadership, leading critical triage efforts with remarkable composure while maintaining her trademark positive attitude."
-                <div class="testimonial-author">— Senior Technology Executive</div>
-            </div>
-            
-            <div class="testimonial">
-                "Smita is business-savvy, thorough, pragmatic, and a very smart counsel and partner. She provided insightful counsel on Data Analytics, AI/Machine Learning, and personal data use. Exceptional in partnering to understand strategy and advise the best way to balance risk."
-                <div class="testimonial-author">— Product Leadership Team</div>
-            </div>
-            
-            <div class="testimonial">
-                "We were awestruck by her expertise on Technology along with understanding of different AI regulatory frameworks. Her insights on AI governance and recommendations on organizational AI roles were invaluable for staying relevant in business."
-                <div class="testimonial-author">— Conference Attendee</div>
-            </div>
-        </section>
+            <!-- Recognition Section -->
+            <section class="section-full">
+                <div class="section-header">
+                    <h2 class="section-title">Recognition & Impact</h2>
+                </div>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section fade-in">
-            <h2>Speaking Inquiries</h2>
-            <p>Ready to bring cutting-edge insights on AI governance and technology law to your audience? Let's discuss how we can create an impactful experience that drives real business transformation.</p>
+                <div class="section-grid">
+                    <div class="card fade-in stagger-1">
+                        <h3 class="card-title">Awards & Honors</h3>
+                        <div class="card-content">
+                            <a href="https://modern-counsel.com/2024/35u35-smita-rajmohan/">Modern Counsel 35 Under 35</a> honoree recognizing exceptional legal leadership. Featured in <a href="https://womenworthwatching.com/smita-rajmohan/">Women Worth Watching</a> and <a href="https://www.chambers-associate.com/career-moves/associate-experience-smita-rajmohan">Chambers Associate</a> for innovation in technology law.
+                        </div>
+                    </div>
 
-            <div class="contact-form">
-                <h3>Get in Touch</h3>
-                <form action="https://formspree.io/f/movwyadb" method="POST">
-                    <input type="hidden" name="_to" value="smitarajmohan@gmail.com">
-                    <input type="hidden" name="_subject" value="Speaking Inquiry from Website">
-                    
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
+                    <div class="card fade-in stagger-2">
+                        <h3 class="card-title">Board Leadership</h3>
+                        <div class="card-content">
+                            Extensive board experience driving strategic initiatives across diverse organizations: <strong>UN Women SF</strong>, <strong>Theatre Bay Area</strong>, and <strong>Berkeley Law School</strong>. Active startup advisor through <strong>Berkeley SkyDeck</strong> accelerator program.
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="organization">Organization</label>
-                        <input type="text" id="organization" name="organization">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="event-type">Event Type</label>
-                        <select id="event-type" name="event-type">
-                            <option value="">Select event type</option>
-                            <option value="keynote">Keynote Presentation</option>
-                            <option value="workshop">Workshop</option>
-                            <option value="panel">Panel Discussion</option>
-                            <option value="conference">Conference Session</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="date">Preferred Date</label>
-                        <input type="date" id="date" name="date">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="audience">Expected Audience Size</label>
-                        <input type="number" id="audience" name="audience" placeholder="e.g., 50-100">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="topic">Preferred Topic/Theme</label>
-                        <input type="text" id="topic" name="topic" placeholder="e.g., AI Governance, Privacy Law">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Additional Details</label>
-                        <textarea id="message" name="message" placeholder="Tell me more about your event, audience, and objectives..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn">Send Inquiry</button>
-                </form>
-            </div>
+                </div>
+            </section>
 
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/smitarajmohan/" target="_blank" class="btn btn-outline">LinkedIn</a>
-                <a href="mailto:smitarajmohan@gmail.com" class="btn btn-outline">Email Direct</a>
-            </div>
-        </section>
+            <!-- Writing Section -->
+            <section class="section-full">
+                <div class="section-header">
+                    <h2 class="section-title">Thought Leadership</h2>
+                    <p class="section-subtitle">Published insights shaping the future of AI governance and technology law</p>
+                </div>
+
+                <div class="writing-grid fade-in">
+                    <a href="https://www.informationweek.com/machine-learning-ai/asking-nicely-might-solve-generative-ai-s-copyright-problem" class="writing-item">
+                        <div class="writing-title">Solving Generative AI's Copyright Problem</div>
+                        <div class="writing-publication">InformationWeek</div>
+                    </a>
+                    <a href="https://www.informationweek.com/machine-learning-ai/moravec-s-paradox-what-self-driving-and-vr-can-teach-us" class="writing-item">
+                        <div class="writing-title">Moravec's Paradox in AI Development</div>
+                        <div class="writing-publication">InformationWeek</div>
+                    </a>
+                    <div class="writing-item">
+                        <div class="writing-title">AI Governance Frameworks</div>
+                        <div class="writing-publication">Bloomberg Law</div>
+                    </div>
+                    <div class="writing-item">
+                        <div class="writing-title">Technology Policy Analysis</div>
+                        <div class="writing-publication">IEEE Spectrum</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="section-full">
+                <div class="section-header">
+                    <h2 class="section-title">What Audiences Say</h2>
+                </div>
+
+                <div class="testimonials-grid fade-in">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Smita's remarkable ability to navigate complex situations with poise and strategic thinking is truly exceptional. She masterfully coordinates with C-suite executives and senior leadership, leading critical triage efforts with remarkable composure while maintaining her trademark positive attitude."
+                        </div>
+                        <div class="testimonial-author">— Senior Technology Executive</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Smita is business-savvy, thorough, pragmatic, and a very smart counsel and partner. She provided insightful counsel on Data Analytics, AI/Machine Learning, and personal data use. Exceptional in partnering to understand strategy and advise the best way to balance risk."
+                        </div>
+                        <div class="testimonial-author">— Product Leadership Team</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "We were awestruck by her expertise on Technology along with understanding of different AI regulatory frameworks. Her insights on AI governance and recommendations on organizational AI roles were invaluable for staying relevant in business."
+                        </div>
+                        <div class="testimonial-author">— Conference Attendee</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Foundation Section -->
+            <section class="section-full">
+                <div class="section-header">
+                    <h2 class="section-title">Foundation & Expertise</h2>
+                </div>
+
+                <div class="section-grid">
+                    <div class="card fade-in stagger-1">
+                        <h3 class="card-title">BigLaw Heritage</h3>
+                        <div class="card-content">
+                            Built foundation in IP and technology transactions at <strong>Cooley LLP</strong> and <strong>Kirkland & Ellis</strong>. Deep expertise in M&A, licensing, and complex technology deals spanning <span class="metric">10+</span> years of practice.
+                        </div>
+                    </div>
+
+                    <div class="card fade-in stagger-2">
+                        <h3 class="card-title">Global Practice</h3>
+                        <div class="card-content">
+                            Cross-border legal expertise spanning <strong>India</strong> and <strong>United States</strong> jurisdictions. Specialized in international compliance frameworks, data protection, and global technology transactions at enterprise scale.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-content">
+            <h2 class="contact-title">Speaking Inquiries</h2>
+            <p>Ready to bring cutting-edge insights on AI governance and technology law to your audience? Let's discuss how we can create an impactful experience that drives real business transformation.</p>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/smitarajmohan/" target="_blank" class="contact-btn primary">LinkedIn</a>
+                <a href="mailto:smitarajmohan@gmail.com" class="contact-btn">Speaking Inquiries</a>
+                <a href="#" class="contact-btn">Schedule Meeting</a>
+            </div>
+        </div>
+    </section>
+
     <script>
-        // Smooth scrolling for navigation
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -538,55 +628,12 @@
             });
         });
 
-        // Active navigation highlighting
+        // Add subtle parallax effect to hero
         window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.pageYOffset >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Form submission with success message
-        document.querySelector('form').addEventListener('submit', function(e) {
-            const submitBtn = this.querySelector('button[type="submit"]');
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            // Re-enable button after 3 seconds (in case of slow response)
-            setTimeout(() => {
-                submitBtn.textContent = 'Send Inquiry';
-                submitBtn.disabled = false;
-            }, 3000);
-        });
-
-        // Intersection Observer for fade-in animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = '0.1s';
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero');
+            const speed = scrolled * 0.5;
+            parallax.style.transform = `translateY(${speed}px)`;
         });
     </script>
 </body>
