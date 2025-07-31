@@ -151,11 +151,32 @@
             transform: scaleX(1);
         }
 
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card-thumbnail {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
         .card-title {
             font-size: 1.3rem;
             font-weight: 600;
             color: #0f0f23;
-            margin-bottom: 15px;
+            margin: 0;
             letter-spacing: -0.01em;
         }
 
@@ -175,16 +196,12 @@
             color: #764ba2;
         }
 
-        /* Metrics */
-        .metric {
+        /* Stats */
+        .stat {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin: 0 4px;
+            color: #667eea;
+            font-weight: 700;
+            font-size: 1em;
         }
 
         /* Featured Section */
@@ -211,11 +228,28 @@
         .featured-content {
             position: relative;
             z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .featured-thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            flex-shrink: 0;
         }
 
         .featured .card-title {
             font-size: 1.6rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         /* Testimonials */
@@ -269,16 +303,44 @@
             border-radius: 12px;
             border-left: 4px solid #667eea;
             transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
         }
 
         .writing-item:hover {
             transform: translateX(8px);
             background: #e8eeff;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .writing-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .writing-thumbnail {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            flex-shrink: 0;
         }
 
         .writing-title {
             font-weight: 600;
-            margin-bottom: 10px;
+            margin: 0;
+            color: #0f0f23;
         }
 
         .writing-publication {
@@ -286,6 +348,7 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            margin-top: 5px;
         }
 
         /* Contact Section */
@@ -343,6 +406,8 @@
         .contact-btn:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
         }
 
         .contact-btn.primary {
@@ -353,6 +418,71 @@
         .contact-btn.primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            color: white;
+        }
+
+        /* Awards Grid */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .award-item {
+            background: #f8faff;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .award-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.1);
+        }
+
+        .award-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .award-thumbnail {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .award-title {
+            font-weight: 600;
+            color: #0f0f23;
+            margin: 0;
+        }
+
+        .award-description {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .award-description a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .award-description a:hover {
+            color: #764ba2;
         }
 
         /* Responsive Design */
@@ -378,8 +508,19 @@
                 padding: 30px;
             }
 
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
             .featured {
                 padding: 40px 30px;
+            }
+
+            .featured-content {
+                flex-direction: column;
+                text-align: center;
             }
 
             .contact {
@@ -418,7 +559,7 @@
         <div class="hero-content">
             <h1 class="name">Smita Rajmohan</h1>
             <p class="title">Assistant General Counsel for Artificial Intelligence</p>
-            <p class="tagline">Leading AI legal governance at Intuit's <span class="metric">$14B</span> fintech ecosystem. Shaping national AI policy through NIST and IEEE leadership. <span class="metric">Obama Foundation Leader</span> driving technology law innovation.</p>
+            <p class="tagline">Leading AI legal governance at Intuit's <span class="stat">$14B</span> fintech ecosystem. Shaping national AI policy through NIST and IEEE leadership. <strong>Obama Foundation Leader</strong> driving technology law innovation.</p>
         </div>
     </section>
 
@@ -434,9 +575,12 @@
 
                 <div class="featured fade-in">
                     <div class="featured-content">
-                        <h3 class="card-title">Obama Foundation Leader 2024-2025</h3>
-                        <div class="card-content">
-                            Selected as <a href="https://www.obama.org/programs/leaders/usa/2024-2025/smita-rajmohan/">Obama Foundation Leader</a> among <span class="metric">100</span> emerging leaders nationwide. <a href="https://www.law.berkeley.edu/spotlight/smita-rajmohan-named-obama-foundation-leader/">Recognized by UC Berkeley Law</a> for driving transformative change at the intersection of technology and social impact.
+                        <div class="featured-thumbnail">OF</div>
+                        <div>
+                            <h3 class="card-title">Obama Foundation Leader 2024-2025</h3>
+                            <div class="card-content">
+                                Selected as <a href="https://www.obama.org/programs/leaders/usa/2024-2025/smita-rajmohan/">Obama Foundation Leader</a> among <span class="stat">100</span> emerging leaders nationwide. <a href="https://www.law.berkeley.edu/spotlight/smita-rajmohan-named-obama-foundation-leader/">Recognized by UC Berkeley Law</a> for driving transformative change at the intersection of technology and social impact.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -445,33 +589,45 @@
             <!-- Experience Grid -->
             <div class="section-grid">
                 <div class="card fade-in stagger-1">
-                    <h3 class="card-title">Intuit</h3>
+                    <div class="card-header">
+                        <div class="card-thumbnail">IN</div>
+                        <h3 class="card-title">Intuit</h3>
+                    </div>
                     <div class="card-content">
                         <strong>Assistant General Counsel for AI</strong><br>
-                        Leading legal governance for AI initiatives across TurboTax, QuickBooks, and Credit Karma. Managing cross-functional teams and stakeholder relationships for <span class="metric">100M+</span> users and <span class="metric">$14B</span> in annual revenue operations.
+                        Leading legal governance for AI initiatives across TurboTax, QuickBooks, and Credit Karma. Managing cross-functional teams and stakeholder relationships for <span class="stat">100M+</span> users and <span class="stat">$14B</span> in annual revenue operations.
                     </div>
                 </div>
 
                 <div class="card fade-in stagger-2">
-                    <h3 class="card-title">Policy Leadership</h3>
+                    <div class="card-header">
+                        <div class="card-thumbnail">AI</div>
+                        <h3 class="card-title">Policy Leadership</h3>
+                    </div>
                     <div class="card-content">
                         <strong>NIST AI Safety Consortium</strong> member shaping national AI safety standards. <strong>Vice Chair, AI Policy Committee</strong> at IEEE USA. Bridging technical innovation with regulatory frameworks at the highest levels of government and industry.
                     </div>
                 </div>
 
                 <div class="card fade-in stagger-3">
-                    <h3 class="card-title">Autodesk</h3>
+                    <div class="card-header">
+                        <div class="card-thumbnail">AD</div>
+                        <h3 class="card-title">Autodesk</h3>
+                    </div>
                     <div class="card-content">
                         <strong>Head of AI Group Legal</strong><br>
-                        Pioneered legal frameworks for generative AI development serving <span class="metric">4M+</span> creators. Navigated first-of-kind intellectual property and copyright challenges in AI-generated content, enabling breakthrough product launches.
+                        Pioneered legal frameworks for generative AI development serving <span class="stat">4M+</span> creators. Navigated first-of-kind intellectual property and copyright challenges in AI-generated content, enabling breakthrough product launches.
                     </div>
                 </div>
 
                 <div class="card fade-in stagger-4">
-                    <h3 class="card-title">Apple</h3>
+                    <div class="card-header">
+                        <div class="card-thumbnail">AP</div>
+                        <h3 class="card-title">Apple</h3>
+                    </div>
                     <div class="card-content">
                         <strong>Senior Product Counsel</strong><br>
-                        Launch team legal counsel for iPad (<span class="metric">500M+</span> units sold), AirTag, and AirPods. Navigated international regulatory approvals across <span class="metric">30+</span> countries, building privacy frameworks still in use today.
+                        Launch team legal counsel for iPad (<span class="stat">500M+</span> units sold), AirTag, and AirPods. Navigated international regulatory approvals across <span class="stat">30+</span> countries, building privacy frameworks still in use today.
                     </div>
                 </div>
             </div>
@@ -482,18 +638,44 @@
                     <h2 class="section-title">Recognition & Impact</h2>
                 </div>
 
-                <div class="section-grid">
-                    <div class="card fade-in stagger-1">
-                        <h3 class="card-title">Awards & Honors</h3>
-                        <div class="card-content">
-                            <a href="https://modern-counsel.com/2024/35u35-smita-rajmohan/">Modern Counsel 35 Under 35</a> honoree recognizing exceptional legal leadership. Featured in <a href="https://womenworthwatching.com/smita-rajmohan/">Women Worth Watching</a> and <a href="https://www.chambers-associate.com/career-moves/associate-experience-smita-rajmohan">Chambers Associate</a> for innovation in technology law.
+                <div class="awards-grid fade-in">
+                    <div class="award-item">
+                        <div class="award-header">
+                            <div class="award-thumbnail">35</div>
+                            <h3 class="award-title">Modern Counsel 35 Under 35</h3>
+                        </div>
+                        <div class="award-description">
+                            <a href="https://modern-counsel.com/2024/35u35-smita-rajmohan/">Recognized</a> for exceptional legal leadership and innovation in technology law.
                         </div>
                     </div>
 
-                    <div class="card fade-in stagger-2">
-                        <h3 class="card-title">Board Leadership</h3>
-                        <div class="card-content">
-                            Extensive board experience driving strategic initiatives across diverse organizations: <strong>UN Women SF</strong>, <strong>Theatre Bay Area</strong>, and <strong>Berkeley Law School</strong>. Active startup advisor through <strong>Berkeley SkyDeck</strong> accelerator program.
+                    <div class="award-item">
+                        <div class="award-header">
+                            <div class="award-thumbnail">WW</div>
+                            <h3 class="award-title">Women Worth Watching</h3>
+                        </div>
+                        <div class="award-description">
+                            Featured in <a href="https://womenworthwatching.com/smita-rajmohan/">Women Worth Watching</a> for leadership in legal innovation.
+                        </div>
+                    </div>
+
+                    <div class="award-item">
+                        <div class="award-header">
+                            <div class="award-thumbnail">CH</div>
+                            <h3 class="award-title">Chambers Associate</h3>
+                        </div>
+                        <div class="award-description">
+                            Profiled in <a href="https://www.chambers-associate.com/career-moves/associate-experience-smita-rajmohan">Chambers Associate</a> for career excellence in technology law.
+                        </div>
+                    </div>
+
+                    <div class="award-item">
+                        <div class="award-header">
+                            <div class="award-thumbnail">BD</div>
+                            <h3 class="award-title">Board Leadership</h3>
+                        </div>
+                        <div class="award-description">
+                            Strategic board experience with <strong>UN Women SF</strong>, <strong>Theatre Bay Area</strong>, and <strong>Berkeley Law School</strong>. Active startup advisor through <strong>Berkeley SkyDeck</strong>.
                         </div>
                     </div>
                 </div>
@@ -508,20 +690,40 @@
 
                 <div class="writing-grid fade-in">
                     <a href="https://www.informationweek.com/machine-learning-ai/asking-nicely-might-solve-generative-ai-s-copyright-problem" class="writing-item">
-                        <div class="writing-title">Solving Generative AI's Copyright Problem</div>
-                        <div class="writing-publication">InformationWeek</div>
+                        <div class="writing-header">
+                            <div class="writing-thumbnail">IW</div>
+                            <div>
+                                <div class="writing-title">Solving Generative AI's Copyright Problem</div>
+                                <div class="writing-publication">InformationWeek</div>
+                            </div>
+                        </div>
                     </a>
                     <a href="https://www.informationweek.com/machine-learning-ai/moravec-s-paradox-what-self-driving-and-vr-can-teach-us" class="writing-item">
-                        <div class="writing-title">Moravec's Paradox in AI Development</div>
-                        <div class="writing-publication">InformationWeek</div>
+                        <div class="writing-header">
+                            <div class="writing-thumbnail">IW</div>
+                            <div>
+                                <div class="writing-title">Moravec's Paradox in AI Development</div>
+                                <div class="writing-publication">InformationWeek</div>
+                            </div>
+                        </div>
                     </a>
                     <div class="writing-item">
-                        <div class="writing-title">AI Governance Frameworks</div>
-                        <div class="writing-publication">Bloomberg Law</div>
+                        <div class="writing-header">
+                            <div class="writing-thumbnail">BL</div>
+                            <div>
+                                <div class="writing-title">AI Governance Frameworks</div>
+                                <div class="writing-publication">Bloomberg Law</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="writing-item">
-                        <div class="writing-title">Technology Policy Analysis</div>
-                        <div class="writing-publication">IEEE Spectrum</div>
+                        <div class="writing-header">
+                            <div class="writing-thumbnail">IE</div>
+                            <div>
+                                <div class="writing-title">Technology Policy Analysis</div>
+                                <div class="writing-publication">IEEE Spectrum</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -564,14 +766,20 @@
 
                 <div class="section-grid">
                     <div class="card fade-in stagger-1">
-                        <h3 class="card-title">BigLaw Heritage</h3>
+                        <div class="card-header">
+                            <div class="card-thumbnail">BL</div>
+                            <h3 class="card-title">BigLaw Heritage</h3>
+                        </div>
                         <div class="card-content">
-                            Built foundation in IP and technology transactions at <strong>Cooley LLP</strong> and <strong>Kirkland & Ellis</strong>. Deep expertise in M&A, licensing, and complex technology deals spanning <span class="metric">10+</span> years of practice.
+                            Built foundation in IP and technology transactions at <strong>Cooley LLP</strong> and <strong>Kirkland & Ellis</strong>. Deep expertise in M&A, licensing, and complex technology deals spanning <span class="stat">10+</span> years of practice.
                         </div>
                     </div>
 
                     <div class="card fade-in stagger-2">
-                        <h3 class="card-title">Global Practice</h3>
+                        <div class="card-header">
+                            <div class="card-thumbnail">GL</div>
+                            <h3 class="card-title">Global Practice</h3>
+                        </div>
                         <div class="card-content">
                             Cross-border legal expertise spanning <strong>India</strong> and <strong>United States</strong> jurisdictions. Specialized in international compliance frameworks, data protection, and global technology transactions at enterprise scale.
                         </div>
